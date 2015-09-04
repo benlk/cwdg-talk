@@ -1,0 +1,81 @@
+@mono: monospace;
+@baseFontSize: 24px;
+@orange: #FF7F00;
+
+html, body {
+	font-size: @baseFontSize;
+	padding: 0;
+	margin: 0;
+}
+section {
+	width: 100vw;
+	min-height: 100vh;
+	overflow: visible;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	padding-top: 5vh;
+	padding-top: 5vh;
+	border: 20px solid #eee;
+	margin-bottom: 3px;
+	box-sizing: border-box;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&.sponsored {
+		border-color: #09C9FF;
+		font-family: Effra, sans;
+		p {
+			font-family: inherit;
+		}
+		a {
+			color: #09C9FF;
+			&:visited {
+				color: #09C9FF;
+			}
+		}
+		img {
+			max-width: 75vw;
+			// INN Logo brand guidelines, see https://github.com/INN/Largo/blob/master/less/inc/footer.less#L145-L162
+			@inn-logo-physical-width: 1669px;
+			@inn-logo-physical-height: 385px;
+			@inn-logo-width: 40%;
+			@inn-logo-square: (@inn-logo-width*184/@inn-logo-physical-width); // 184 comes form the width of one square in INN's 2015 logo
+			@inn-logo-height: (@inn-logo-width*@inn-logo-physical-height/@inn-logo-physical-width); // the rendered height of the logo image
+			@footer-social-logo-font-size: @baseFontSize + 2;
+			margin-top: @inn-logo-square;
+			margin-bottom: @inn-logo-square*0.75;
+			max-width: @inn-logo-width;
+		}
+	}
+	style {
+		display: block;
+		border: 2px dotted #F77710;
+		font-family: @mono;
+		overflow: display;
+		white-space: pre-wrap;
+	}
+}
+code, pre {
+	tab-size: 2;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+}
+pre {
+	overflow-x: scroll;
+	overflow-y: visible;
+}
+img {
+	max-width: 100%;
+}
+.center {
+	text-align: center;
+	display: block;
+}
+.hero {
+	font-size: 250%;
+}
+li code,
+p code {
+	display: inline;
+	white-space: pre-wrap;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Intro to CSS</title>
+		<meta http-equiv="refresh" content="10; URL=http://localhost/etc/cwdg-talk/"></meta>
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+		<section class="title intro">
+			<h1>Introduction to CSS</h1>
+			<ul>
+				<li>What is CSS?</li>
+				<li>How is it loaded?</li>
+				<li>What can you do with it?</li>
+				<li>Where can you learn more?</li>
+				<li>Basic styling</li>
+			</ul>
+			<p class="credits">Ben Keith <a href="https://twitter.com/benlkeith">@benlkeith</a></p>
+		</section>
+		<section class="intro">
+			<h2>This deck does not cover:</h2>
+			<ul>
+				<li>units</li>
+				<li>pseudo-elements</li>
+				<li>positioning</li>
+				<li>grids</li>
+				<li>responsive web design</li>
+				<li>media queries</li>
+				<li>z-indexes</li>
+			</ul>
+			<p>That's next week.</p>
+		</section>
+		<section class="intro">
+			<h2>This deck also does not cover</h2>
+			<ul>
+				<li>Stealing other people's CSS</li>
+				<li>animations</li>
+				<li>more pseudo-elements<li>
+				<li>filters</li>
+				<li>transformatinos</li>
+				<li>browser prefixes</li>
+				<li>preprocessors</li>
+				<li>mixins</li>
+			</ul>
+			<p>That's the following week, and it will be covered by Open Source Club president Eli Gladman.</p>
+		</section>
+		<section class="sponsored">
+			<p><span class="center">This talk is brought to you in part by:</span><span class="center hero"><a href="http://inn.org<"><img src="img/inn_logo_blue_final.png" alt="The Institute for Nonprofit News logo" /></a></span></p>
+			<p>They pay me to do web development.</p>
+			<p><a href="http://nerds.inn.org/2015/08/20/be-our-next-apprentice-make-the-world-a-better-place/">We're hiring apprentices</a> for the fall and spring terms!</p>
+		</section>
+		<section>
+			<h1> How to follow along</h2>
+			<p class="center hero"><a href="https://benlk.github.io/cwdg-talk">benlk.github.io/cwdg-talk</a></p>
+		</section>
+		<section>
+			<h1>What is CSS?</h1>
+			// cascading style sheets
+			// what's cascading? we'll get to that.
+			// What's a style? It changes how an element is displayed
+			// Any element?
+			// Yep, including XML and SVGs
+			// Styled RSS feeds, for instance
+			// or the styles on the pirates map, which are on SVGs
+		</section>
+		<section>
+			<h1>Why stylesheets?</h1>
+			// Styles go in a separate file because of the <a href="https://en.wikipedia.org/wiki/Separation_of_concerns#HTML.2C_CSS.2C_JavaScript">separation of concerns</a>
+			// separate content from presentation from functionality
+			// https://medium.com/cool-code-pal/a-call-for-web-developers-to-deprecate-their-css-1f6430781393 is satire and should be interpreted as such
+		</section>
+		<section>
+			<h1>How do stylesheets get on the page?</h1>
+			<p>The primary way is through a <code>link</code> tag:</code>
+			<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Intro to CSS&lt;/title&gt;
+		&lt;link rel="stylesheet" href="css/style.css"/&gt;
+			</code></pre>
+			<p>The important parts:</p>
+			<ul>
+				<li><code>rel="stylesheet"</code> tells the browser that the link is to be interpreted as a stylesheet</li>
+				<li><code>href="css/style.css"</code> tells the browser where the stylesheet is.
+			</ul>
+
+		</section>
+		<section>
+			<h1>Or use a &lt;style&gt; tag</h1>
+			<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Intro to CSS&lt;/title&gt;
+		&lt;style&gt;
+html {
+    color: blue;
+}
+h1 {
+color: pink;
+}
+		&lt;/style&gt;
+			</code></pre>
+			<p>Anything between <code>&lt;style&gt;</code> and <code>&lt;/style&gt;</code> will be interpreted as a style that should be applied to the page.
+		</section>
+		<section>
+			<h1>Or use inline styles</h1>
+			<pre><code>&lt;p style="color:green;"&gt;Green text&lt;/p&gt;</code></pre>
+			<p style="color: green;">Green text</p>
+			<hr />
+			<p>The <code>style=""</code> attribute can be applied to any element.</p>
+			<p>Inline styles make your HTML messy. They are a weapon of last resort, for when you need to verride every other style that might affect the element.</p>
+			<p>If you have to use them, you should feel sad.</p>
+		</section>
+		<section>
+			<h1>Let's play with some styles</h1>
+			<style contenteditable>p.twelve {
+	
+}</style>
+			<p class="twelve">This is a p tag with the class 'twelve'. It has <em>emphasized</em> content, <b>bold</b> content, <i>italic content</i>, <u>underlined content</u>, <strong>strong</strong> content, <span>a span</span>, and let's add <a href="#">an a tag</a> for good measure.</p>
+		</section>
+		<section>
+			<h1>Let's talk about borders</h1>
+			// this section probably a bunch of different HRs with different border-tops
+			// What else can you do with borders?
+			// http://ctrlq.org/code/19659-pure-css-triangles
+			// Different-color underlines on text
+		</section>
+		<section id="background-plaything">
+			<h1>What about backgrounds?</h1>
+			<style contenteditable>#background-plaything{background: chartreuse;}
+#-background-plaything{background: none;}
+#-background-plaything{background: transparent;}
+#-background-plaything{background: ;}
+#-background-plaything{background: green;}
+</style>
+			// play with the background of this slide
+			<p><code>background</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">fairly complex shorthand</a> for the following properties:</p>
+			<ul>
+				<li><code></code>:</li>
+				<li><code></code>:</li>
+				<li><code></code>:</li>
+				<li><code></code>:</li>
+				<li><code></code>:</li>
+				<li><code>background-color: &lt;color&gt;</code>: can be a hex code, defined using RGB and alpha <code>rgba(255,255,255,0.5)</code> or Hue, Saturation, Lightness and alpha <code>hsla(240, 100%, 50%, 1)</code>, or one of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#System_Colors">a bunch of proprietary extensions</a>.</li>
+		</section>
+		<section>
+			<h1></h1>
+		</section>
+		<section>
+			<h1></h1>
+		</section>
+		<section>
+			<h1></h1>
+		</section>
+		<section>
+			<h1></h1>
+		</section>
+		<section>
+			<h1></h1>
+		</section>
+		<section>
+			<h1></h1>
+		</section>
+		<section>
+			<h1></h1>
+		</section>
+		<section>
+			<h1></h1>
+		</section>
+		<section>
+			<h1></h1>
+		</section>
+		<section>
+			<h1></h1>
+		</section>
+	</body>
+</html>
