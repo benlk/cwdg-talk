@@ -34,13 +34,13 @@
 			<h2>This deck also does not cover</h2>
 			<ul>
 				<li>Stealing other people's CSS</li>
-				<li>animations</li>
-				<li>more pseudo-elements<li>
-				<li>filters</li>
-				<li>transformatinos</li>
-				<li>browser prefixes</li>
-				<li>preprocessors</li>
-				<li>mixins</li>
+				<li>Animations</li>
+				<li>More pseudo-elements</li>
+				<li>Filters</li>
+				<li>Transformatinos</li>
+				<li>Browser prefixes</li>
+				<li>Preprocessors</li>
+				<li>Mixins</li>
 			</ul>
 			<p>That's the following week, and it will be covered by Open Source Club president Eli Gladman.</p>
 		</section>
@@ -55,19 +55,96 @@
 		</section>
 		<section>
 			<h1>What is CSS?</h1>
-			// cascading style sheets
-			// what's cascading? we'll get to that.
-			// What's a style? It changes how an element is displayed
-			// Any element?
-			// Yep, including XML and SVGs
-			// Styled RSS feeds, for instance
-			// or the styles on the pirates map, which are on SVGs
+			<p>It's <b>Cascading Style Sheets</b></p>
+			<p>A collection of styles, collected in a stylesheet. Styles describe how elements are displayed.</p>
+			<style contenteditable>selector { property: value; }
+</style>
+		</section>
+		<section class="auto">
+			<h2>What sort of elements?</h2>
+			<ul>
+				<li>Any HTML element</li>
+				<li>Any Scalable Vector Graphic
+					<ul>
+						<li><a href="http://f.benlk.com/pirates/">Pirates example</a></li>
+					</ul>
+				</li>
+				<li>Any XML
+					<ul>
+						<li><a href="http://www.w3.org/Style/styling-XML">W3C example</a></li>
+					</ul>
+				</li>
+				<li>Really anything that looks like HTML or XML and displays on a webpage. You can make up your own elements and style them.</li>
+			</ul>
+			<style contenteditable>duck {
+	display: inline-block;
+	background-image: url(img/duck-upright.jpg);
+	background-color: orange;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 150px;
+	height: 150px;
+}
+duck[flat] {
+	background-image: url(img/duck-flat.jpg);
+}
+ducktainer {
+	display: block;
+	text-align: center;
+	width: 90%;
+	margin: 1em auto;
+}
+</style>
+			<ducktainer>
+				<duck></duck>
+				<duck flat></duck>
+			</ducktainer>
 		</section>
 		<section>
-			<h1>Why stylesheets?</h1>
-			// Styles go in a separate file because of the <a href="https://en.wikipedia.org/wiki/Separation_of_concerns#HTML.2C_CSS.2C_JavaScript">separation of concerns</a>
-			// separate content from presentation from functionality
-			// https://medium.com/cool-code-pal/a-call-for-web-developers-to-deprecate-their-css-1f6430781393 is satire and should be interpreted as such
+			<h1> The Cascade </h1>
+			<p>In the duck example. <code>duck[flat]</code> overrode the <code>background-image</code> property of <code>duck</code>. It's more specific than just plain <code>duck</code>.</p>
+			<p>In general:</p>
+			<p>Styles with more selectors override styles with fewer</p>
+			<style contentedtiable>.eleven {
+	color: blue;
+}
+p.eleven {
+	color: red;
+}</style>
+			<p class=eleven>Eleven!</p>
+			<p>Styles defined later override styles defined earlier:</p>
+			<style contentedtiable>.thirteen {
+	color: maroon;
+}
+.thirteen {
+	color: gray;
+}</style>
+			<p class=thirteen>Thirteen.</p>
+			<p>Properties marked <code>!important</code> override properties not <code>!important</code></p>
+			<style contenteditable>.fourteen {
+	background-color: pink;
+	font-size: 150%;
+}
+.fourteen code {
+	background-color: orange !important;
+}
+.fourteen code {
+	background-color: blue;
+}
+</style>
+			<p id="ex-important" class=fourteen>You should never use <code>!important</code>.</p>
+			<p>Note that !important <em>does</em> override more-specific selectors.</p>
+			<style contenteditable>html body section p.fourteen code {
+	background-color: red;
+}
+</style>
+		</section>
+		<section>
+			<h1>Why a style<em>sheet</em>?</h1>
+			<p>Styles go in a separate file because of the <a href="https://en.wikipedia.org/wiki/Separation_of_concerns#HTML.2C_CSS.2C_JavaScript">separation of concerns</a>: <strong>Separate content from presentation from functionality</strong></p>
+			<p>Keeping styles separate from the page lets you update the entire site's styles by editing just one file.</p>
+			<p>If you ever hear someone calling for you to <a href="https://medium.com/cool-code-pal/a-call-for-web-developers-to-deprecate-their-css-1f6430781393">replace your CSS with JavaScript</a>, they are telling a joke.</p>
 		</section>
 		<section>
 			<h1>How do stylesheets get on the page?</h1>
@@ -144,6 +221,9 @@ color: pink;
 				<li><code></code>:</li>
 				<li><code></code>:</li>
 				<li><code>background-color: &lt;color&gt;</code>: can be a hex code, defined using RGB and alpha <code>rgba(255,255,255,0.5)</code> or Hue, Saturation, Lightness and alpha <code>hsla(240, 100%, 50%, 1)</code>, or one of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#System_Colors">a bunch of proprietary extensions</a>.</li>
+			</ul>
+			<p>Watch this 26-minute talk. It explains the origins of color names. It's ... intersting.</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/HmStJQzclHc" frameborder="0" allowfullscreen></iframe>
 		</section>
 		<section>
 			<h1></h1>
@@ -173,7 +253,14 @@ color: pink;
 			<h1></h1>
 		</section>
 		<section>
-			<h1></h1>
+			<h1>Where can you go from here?</h1>
+			<p>Learning resources:</p>
+			<ul>
+				<li><a href="http://www.w3.org/Style/CSS/">The W3C CSS page</a>, the <em>definitive</em> resource for CSS</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started">Mozilla's CSS tutorial</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a>, a fantastic resource for HTML, CSS, JavaScript, and obscure browser Js APIs</li>
+				<li><a href="https://www.codecademy.com/tracks/web">Codecademy's web track</a>, which will walk you through HTML and CSS to build your own r&eacute;sum&eacute;</li>
+				<li></li>
 		</section>
 	</body>
 </html>

@@ -1,4 +1,4 @@
-@mono: monospace;
+@mono: "Ubuntu Mono", Courier, mono;
 @baseFontSize: 24px;
 @orange: #FF7F00;
 
@@ -9,6 +9,7 @@ html, body {
 }
 section {
 	width: 100vw;
+	position: relative;
 	min-height: 100vh;
 	overflow: visible;
 	padding-left: 5vw;
@@ -47,22 +48,34 @@ section {
 			max-width: @inn-logo-width;
 		}
 	}
+	&.auto {
+		height: auto;
+	}
 	style {
 		display: block;
 		border: 2px dotted #F77710;
 		font-family: @mono;
-		overflow: display;
+		overflow: visible;
 		white-space: pre-wrap;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	iframe {
+		width: 90%;
 	}
 }
-code, pre {
+code, pre, style {
 	tab-size: 2;
 	-moz-tab-size: 2;
 	-o-tab-size: 2;
+	font-family: @mono;
 }
 pre {
 	overflow-x: scroll;
 	overflow-y: visible;
+}
+p code {
+	background-color: #eee;
 }
 img {
 	max-width: 100%;
@@ -72,10 +85,20 @@ img {
 	display: block;
 }
 .hero {
-	font-size: 250%;
+	font-size: 8vw;
 }
 li code,
 p code {
 	display: inline;
 	white-space: pre-wrap;
+}
+h1 {
+	text-align: center;
+}
+.credits {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	text-align: center;
 }
