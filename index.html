@@ -20,13 +20,13 @@
 		<section class="intro">
 			<h2>This deck does not cover:</h2>
 			<ul>
-				<li>units</li>
-				<li>pseudo-elements</li>
-				<li>positioning</li>
-				<li>grids</li>
-				<li>responsive web design</li>
-				<li>media queries</li>
-				<li>z-indexes</li>
+				<li>Units</li>
+				<li>Pseudo-elements</li>
+				<li>Positioning</li>
+				<li>Grids</li>
+				<li>Responsive web design</li>
+				<li>Media queries</li>
+				<li>Z-indexes</li>
 			</ul>
 			<p>That's next week.</p>
 		</section>
@@ -52,6 +52,7 @@
 		<section>
 			<h1> How to follow along</h2>
 			<p class="center hero"><a href="https://benlk.github.io/cwdg-talk">benlk.github.io/cwdg-talk</a></p>
+			<p class="center">Go here in your browser now!</p>
 		</section>
 		<section>
 			<h1>What is CSS?</h1>
@@ -196,19 +197,74 @@ color: pink;
 		</section>
 		<section>
 			<h1>Let's play with some styles</h1>
+			<p>Styles that you load in your page override the styles provided by your browser.</p>
+			<p>This is a p tag with default styles. It has <em>emphasized</em> content, <b>bold</b> content, <i>italic content</i>, <u>underlined content</u>, <strong>strong</strong> content, <span>a span</span>, and let's add <a href="#">an a tag</a> for good measure.</p>
+			<p class="twelve">This is a p tag with the class 'twelve'. It has <em>emphasized</em> content, <b>bold</b> content, <i>italic content</i>, <u>underlined content</u>, <strong>strong</strong> content, <span>a span</span>, and let's add <a href="#">an a tag</a> for good measure.</p>
 			<style contenteditable>p.twelve {
 	
 }</style>
-			<p class="twelve">This is a p tag with the class 'twelve'. It has <em>emphasized</em> content, <b>bold</b> content, <i>italic content</i>, <u>underlined content</u>, <strong>strong</strong> content, <span>a span</span>, and let's add <a href="#">an a tag</a> for good measure.</p>
 		</section>
-		<section>
+		<section id="borders">
 			<h1>Let's talk about borders</h1>
-			// this section probably a bunch of different HRs with different border-tops
-			// What else can you do with borders?
+			<div>
+				<div class="thin dotted"></div>
+				<div class="thin dashed"></div>
+				<div class="thin solid"></div>
+				<div class="thin groove"></div>
+				<div class="thin ridge"></div>
+				<div class="thin outset"></div>
+				<div class="thin inset"></div>
+				<div class="thicker dotted"></div>
+				<div class="thicker dashed"></div>
+				<div class="thicker solid"></div>
+				<div class="thicker groove"></div>
+				<div class="thicker ridge"></div>
+				<div class="thicker outset"></div>
+				<div class="thicker inset"></div>
+				<div class="windows solid"></div>
+				<div class="thickest dotted"></div>
+				<div class="thickest dashed"></div>
+				<div class="thickest solid"></div>
+				<div class="thickest groove"></div>
+				<div class="thickest ridge"></div>
+				<div class="thickest outset"></div>
+				<div class="thickest inset"></div>
+			</div>
+			<p>Huh. Those last three solids are, in order: <code>dotted</code>, <code>dashed</code>, and <code>solid</code>. Let's play with the dotted borders, increasing the <code>border-width</code> by 10px each time.</p>
+			<div>
+				<div class="rect dotted b05"></div>
+				<div class="rect dotted b15"></div>
+				<div class="rect dotted b25"></div>
+				<div class="rect dotted b35"></div>
+				<div class="rect dotted b45"></div>
+				<div class="rect dotted b55"></div>
+				<div class="rect dotted b65"></div>
+				<div class="rect dotted b75"></div>
+				<div class="rect dotted b85"></div>
+				<div class="rect dotted b95"></div>
+				<div class="rect dotted b105"></div>
+			</div>
+			<p>And now with the dashed borders.</p>
+			<div>
+				<div class="rect dashed b05"></div>
+				<div class="rect dashed b15"></div>
+				<div class="rect dashed b25"></div>
+				<div class="rect dashed b35"></div>
+				<div class="rect dashed b45"></div>
+				<div class="rect dashed b55"></div>
+				<div class="rect dashed b65"></div>
+				<div class="rect dashed b75"></div>
+			</div>
+			<p>So borders get solid when they're realy thick.</p>
+			<p> But what else can you do with borders?</p>
+		</section>
+		<section todo >
+			<h1>CSS triangles</h1>
+		// What else can you do with borders?
 			// http://ctrlq.org/code/19659-pure-css-triangles
 			// Different-color underlines on text
 		</section>
-		<section id="background-plaything">
+		<section todo id="background-plaything">
 			<h1>What about backgrounds?</h1>
 			<style contenteditable>#background-plaything{background: chartreuse;}
 #-background-plaything{background: none;}
@@ -229,31 +285,39 @@ color: pink;
 			<p>Watch this 26-minute talk. It explains the origins of color names. It's ... interesting.</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/HmStJQzclHc" frameborder="0" allowfullscreen></iframe>
 		</section>
-		<section>
+		<section todo>
+			<h1>Images</h1>
+		</section>
+		<section todo>
+			<h1>Iframes</h1>
+		</section>
+		<section todo>
+			<h1>Lists</h1>
+			// Unorder	ed
+				// make it inline
+				// remove dots
+				// change alignment, etc
+			// Ordered
+				// Different numbering types
+		</section>
+		<section todo>
+			<h1>Tables</h1>
+		</section>
+		<section todo>
+			<h1>border-radiuses</h1>
+			// round images
+			// making things not-quite-round
+		</section>
+		<section todo>
 			<h1></h1>
 		</section>
-		<section>
+		<section todo>
 			<h1></h1>
 		</section>
-		<section>
+		<section todo>
 			<h1></h1>
 		</section>
-		<section>
-			<h1></h1>
-		</section>
-		<section>
-			<h1></h1>
-		</section>
-		<section>
-			<h1></h1>
-		</section>
-		<section>
-			<h1></h1>
-		</section>
-		<section>
-			<h1></h1>
-		</section>
-		<section>
+		<section todo>
 			<h1></h1>
 		</section>
 		<section>

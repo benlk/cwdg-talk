@@ -51,7 +51,10 @@ section {
 	&.auto {
 		height: auto;
 	}
-	style {
+	&[todo] {
+		border-color: pink;
+	}
+	style[contenteditable] {
 		display: block;
 		border: 2px dotted #F77710;
 		font-family: @mono;
@@ -101,4 +104,55 @@ h1 {
 	bottom: 0;
 	right: 0;
 	text-align: center;
+}
+#borders {
+	.dotted { border-style: dotted; }
+	.dashed { border-style: dashed; }
+	.solid { border-style: solid; }
+	.double { border-style: double; }
+	.groove { border-style: groove; }
+	.ridge { border-style: ridge; }
+	.outset { border-style: outset; }
+	.inset { border-style: inset; }
+
+	.thin { border-width: 1px; }
+	.thicker { border-width: 5px; }
+	.thickest { border-width: 40px; }
+
+	> div {
+		position: relative;
+		margin: 0;
+		text-align: center;
+	}
+	div div {
+		box-sizing: border-box;
+		margin: 0;
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		&.windows {
+			border-width: 50px;
+			border-top-color: green;
+			border-left-color: yellow;
+			border-right-color: red;
+			border-bottom-color: blue;
+		}
+		&.rect {
+			display: block;
+			margin: 5px auto;
+			clear: both;
+			width: 300px;
+		}
+	}
+	.b05 { border-width: 5px; }
+	.b15 { border-width: 15px; }
+	.b25 { border-width: 25px; }
+	.b35 { border-width: 35px; }
+	.b45 { border-width: 45px; }
+	.b55 { border-width: 55px; }
+	.b65 { border-width: 65px; }
+	.b75 { border-width: 75px; }
+	.b85 { border-width: 85px; }
+	.b95 { border-width: 95px; }
+	.b105 { border-width: 105px; }
 }
