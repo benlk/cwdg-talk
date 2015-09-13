@@ -315,15 +315,40 @@ color: pink;
 			// Different-color underlines on text
 		</section>
 		<section class="underlines">
-			<h1>Different-color underlines on <code>a</code> elements</h1>
+			<h1>Different-color underlines on <code>&lt;a&gt;</code> elements</h1>
+			<p>The standard underline on <a href="">links</a> is boring.</p>
+			<p class="red-underline">Let's make the link bold, and have <a href="">a red underline on hover</a>.</p>
+			<style contenteditable>.red-underline a {
+	text-decoration: none;
+	font-weight: bold;
+}
+.red-underline a:hover {
+	border-bottom: 3px solid red;
+}
+</style>
+			<p class="green-underline">How about <a href="">a green dotted underline</a> always? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. </p>
+			<style contenteditable>.green-underline a {
+	text-decoration: none;
+	border-bottom: 10px dotted green;
+}
+</style>
+			<p class="blue-underline">Sometimes that <a href="">fat blue double underline</a> needs to have breathing room. Therefore, you'll want to increase the line-height of the paragraph. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. </p>
+			<style contenteditable>.blue-underline a {
+	text-decoration: none;
+	border-bottom: 10px double blue;
+}
+.blue-underline {
+	line-height: 2;
+}
+</style>
 		</section>
 		<section todo id="background-plaything">
 			<h1>What about backgrounds?</h1>
 			<style contenteditable>#background-plaything{background: chartreuse;}
 #-background-plaything{background: none;}
 #-background-plaything{background: transparent;}
-#-background-plaything{background: ;}
-#-background-plaything{background: green;}
+#-background-plaything{background: url(img/bg.png) no-repeat center;}
+#-background-plaything{background: url(img/oranges.png) repeat top center;}
 </style>
 			// play with the background of this slide
 			<p><code>background</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">fairly complex shorthand</a> for the following properties:</p>
@@ -335,8 +360,7 @@ color: pink;
 				<li><code></code>:</li>
 				<li><code>background-color: &lt;color&gt;</code>: can be a hex code, defined using RGB and alpha <code>rgba(255,255,255,0.5)</code> or Hue, Saturation, Lightness and alpha <code>hsla(240, 100%, 50%, 1)</code>, or one of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#System_Colors">a bunch of proprietary extensions</a>.</li>
 			</ul>
-			<p>Watch this 26-minute talk. It explains the origins of color names. It's ... interesting.</p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/HmStJQzclHc" frameborder="0" allowfullscreen></iframe>
+			<p>Watch <a href="https://www.youtube.com/embed/HmStJQzclHc">this 26-minute talk</a>. It explains the origins of color names. It's ... interesting.</p>
 		</section>
 		<section todo>
 			<h1>Images</h1>
