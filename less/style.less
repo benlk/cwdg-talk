@@ -49,7 +49,7 @@ section {
 		}
 	}
 	&.auto {
-		height: auto;
+		min-height: auto;
 	}
 	&[todo] {
 		border-color: pink;
@@ -105,7 +105,7 @@ h1 {
 	right: 0;
 	text-align: center;
 }
-#borders {
+.borders {
 	.dotted { border-style: dotted; }
 	.dashed { border-style: dashed; }
 	.solid { border-style: solid; }
@@ -155,4 +155,18 @@ h1 {
 	.b85 { border-width: 85px; }
 	.b95 { border-width: 95px; }
 	.b105 { border-width: 105px; }
+}
+.keep-reading {
+	span {
+		border: 6px solid transparent;
+		height: 0;
+		width: 0;
+		display: inline-block;
+		margin: 0.2em;
+	}
+	.left { border-left-color: black; }
+	.right { border-right-color: black; }
+	.top { border-top-color: black; }
+	.bottom { border-bottom-color: black; }
+	
 }
