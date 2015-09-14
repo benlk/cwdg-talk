@@ -76,11 +76,13 @@ code, pre, style {
 	-moz-tab-size: 2;
 	-o-tab-size: 2;
 	font-family: @mono;
+	white-space: pre-wrap;
 }
 pre {
 	overflow-x: scroll;
 	overflow-y: visible;
 }
+li code,
 p code {
 	background-color: #eee;
 }
@@ -168,9 +170,20 @@ h1 {
 		display: inline-block;
 		margin: 0.2em;
 	}
-	.left { border-left-color: black; }
-	.right { border-right-color: black; }
-	.top { border-top-color: black; }
-	.bottom { border-bottom-color: black; }
-	
+	.left { border-left-color: black; border-right-width: 0;}
+	.right { border-right-color: black; border-left-width: 0;}
+	.top { border-top-color: black; border-bottom-width: 0;}
+	.bottom { border-bottom-color: black; border-top-width: 0;}
+}
+.images {
+	text-align: centlefter;
+	p {
+		text-align: left;
+	}
+	img {
+		display: block;
+		clear: both;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

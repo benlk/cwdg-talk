@@ -312,7 +312,6 @@ color: pink;
 				<li class="keep-reading"><span class="bottom"></span>Go to the top of the page</li>
 				<li class="keep-reading">Open the drop-down<span class="top"></span></li>
 			</ul>
-			// Different-color underlines on text
 		</section>
 		<section class="underlines">
 			<h1>Different-color underlines on <code>&lt;a&gt;</code> elements</h1>
@@ -344,13 +343,13 @@ color: pink;
 		</section>
 		<section id="background-plaything">
 			<h1>What about backgrounds?</h1>
-			<style contenteditable>#background-plaything{background: chartreuse;}
-#-background-plaything{background: none;}
-#-background-plaything{background: transparent;}
-#-background-plaything{background: rgba(255,0,0,0.1);}
-#-background-plaything{background: url(img/bg.png) no-repeat center;}
-#-background-plaything{background: url(img/oranges.png) repeat top center;}
-#-background-plaything{background: linear-gradient(
+			<style contenteditable>#background-plaything {background: chartreuse;}
+#-background-plaything {background: none;}
+#-background-plaything {background: transparent;}
+#-background-plaything {background: rgba(255,0,0,0.1);}
+#-background-plaything {background: url(img/bg.png) no-repeat center;}
+#-background-plaything {background: url(img/oranges.png) repeat top center;}
+#-background-plaything {background: linear-gradient(
 		9deg,
 		rgba(243,226,199,1) 0%,
 		rgba(182,141,76,1) 51%,
@@ -359,7 +358,7 @@ color: pink;
 		rgba(255,170,43,1) 100%
 	);
 }
-#-background-plaything{background: white;}
+#-background-plaything {background: white;}
 </style>
 			<!-- I used http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28\-45deg\%2C\%20rgba\%28243\%2C226\%2C199\%2C1\%29\%200\%25\%2C\%20rgba\%28182\%2C141\%2C76\%2C1\%29\%2051\%25\%2C\%20rgba\%28103\%2C191\%2C191\%2C1\%29\%2052\%25\%2C\%20rgba\%28255\%2C170\%2C43\%2C1\%29\%2089\%25\%2C\%20rgba\%28255\%2C170\%2C43\%2C1\%29\%20100\%25\%29\%3B' for that last one. CSS gradients are a terrible thing. Read https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient . -->
 			<p><code>background</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">fairly complex shorthand</a> for the following properties:</p>
@@ -380,13 +379,44 @@ color: pink;
 			<p><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> isn't the official specifications, but it's an excellent reference.</p>
 			<p><strong>Don't use W3Schools.</strong> It's out-of-date, inaccurate, and not worth your time.</p>
 			<p>Watch <a href="https://www.youtube.com/embed/HmStJQzclHc">this 26-minute talk</a>. It explains the origins of color names. It's ... interesting.</p>
+			<p class="center hero">What are your questions?</p>
 		</section>
-		<section todo>
+		<section class="images">
 			<h1>Images</h1>
 			<p>You have an inkling of what CSS can do with images from the <code>background</code> property.
+			<img src="img/duck-flat.jpg" style="height: 100px;" />
+			<img src="img/duck-flat.jpg" style="
+				width: 100px;
+				border-top: 50px green solid;
+				border-right: 75px blue double;
+				border-bottom: 50px rebeccapurple groove;
+				border-left: 25px gray dotted;
+				background-color: orange;
+			" />
+			<img src="img/duck-flat.jpg" style="width: 100px; height: 600px;" />
+			<img src="img/duck-flat.jpg" style="width: 600px; height: 50px;" />
+			<p>And that's why it's best to only set the <code>height</code> or <code>width</code> and not both.</p>
+			<p>However, feel free to leave both the <code>width</code> and </code>height</code> unset, and instead set the <code>max-height</code> and <code>max-width</code> properties on <code>img</code> in general. In this document, <code>img { max-width: 100%; }</code> is true, and that's why this 1000px-wide image doesn't overflow.</p>
+			<img src="http://benlk.com/static/uploads/IMG_2052.jpg" style="" />
 		</section>
-		<section todo>
+		<section class="iframes">
 			<h1>Iframes</h1>
+			<p>Generally speaking, iframe embed codes provided to you will have width and height parameters included in the code that you copy:</p>
+			<pre><code>&lt;iframe src="https://www.themarshallproject.org/next-to-die/embed/" style="overflow: hidden; width: 1px; min-width: 100%;" width="100%" height="400" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;
+</code></pre>
+			<iframe src="https://www.themarshallproject.org/next-to-die/embed/" style="overflow: hidden; width: 1px; min-width: 100%;" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+			<p>If you strip that out, iframes will default to 150px by 300px or 100px bt 200px, in most browsers:</p>
+			<iframe src="https://www.themarshallproject.org/next-to-die/embed/" style="width: auto; border: 2px inset;"></iframe>
+			<p>Chrome's useragent stylesheet includes a pretty-ugly <code>border: 2px inset</code>.</p>
+			<p>Here's a sane default style for iframes:</p>
+			<style contenteditable>iframe {
+	max-width: 100%;
+	border: none;
+}
+</style>
+			<p>Remember that inline styles override styles set in your stylesheets.</p>
+
+
 		</section>
 		<section todo>
 			<h1>Lists</h1>
@@ -405,18 +435,6 @@ color: pink;
 			// round images
 			// making things not-quite-round
 		</section>
-		<section todo>
-			<h1></h1>
-		</section>
-		<section todo>
-			<h1></h1>
-		</section>
-		<section todo>
-			<h1></h1>
-		</section>
-		<section todo>
-			<h1></h1>
-		</section>
 		<section>
 			<h1>Where can you go from here?</h1>
 			<p>Learning resources:</p>
@@ -425,7 +443,11 @@ color: pink;
 				<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started">Mozilla's CSS tutorial</a></li>
 				<li><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a>, a fantastic resource for HTML, CSS, JavaScript, and obscure browser Js APIs</li>
 				<li><a href="https://www.codecademy.com/tracks/web">Codecademy's web track</a>, which will walk you through HTML and CSS to build your own r&eacute;sum&eacute;</li>
-				<li></li>
+			</ul>
+		</section>
+		<section>
+			<h1>What's the best way to learn?</h1>
+			<p>Play around with things on your own. Build a portfolio site. Use your browser's inspector tools to see how other people build their sites. See if you can reproduce that style.</p>
 		</section>
 	</body>
 </html>
