@@ -342,28 +342,48 @@ color: pink;
 }
 </style>
 		</section>
-		<section todo id="background-plaything">
+		<section id="background-plaything">
 			<h1>What about backgrounds?</h1>
 			<style contenteditable>#background-plaything{background: chartreuse;}
 #-background-plaything{background: none;}
 #-background-plaything{background: transparent;}
+#-background-plaything{background: rgba(255,0,0,0.1);}
 #-background-plaything{background: url(img/bg.png) no-repeat center;}
 #-background-plaything{background: url(img/oranges.png) repeat top center;}
+#-background-plaything{background: linear-gradient(
+		9deg,
+		rgba(243,226,199,1) 0%,
+		rgba(182,141,76,1) 51%,
+		rgba(103,191,191,1) 51.5%,
+		rgba(255,170,43,1) 89%,
+		rgba(255,170,43,1) 100%
+	);
+}
+#-background-plaything{background: white;}
 </style>
-			// play with the background of this slide
+			<!-- I used http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28\-45deg\%2C\%20rgba\%28243\%2C226\%2C199\%2C1\%29\%200\%25\%2C\%20rgba\%28182\%2C141\%2C76\%2C1\%29\%2051\%25\%2C\%20rgba\%28103\%2C191\%2C191\%2C1\%29\%2052\%25\%2C\%20rgba\%28255\%2C170\%2C43\%2C1\%29\%2089\%25\%2C\%20rgba\%28255\%2C170\%2C43\%2C1\%29\%20100\%25\%29\%3B' for that last one. CSS gradients are a terrible thing. Read https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient . -->
 			<p><code>background</code> is a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">fairly complex shorthand</a> for the following properties:</p>
 			<ul>
-				<li><code></code>:</li>
-				<li><code></code>:</li>
-				<li><code></code>:</li>
-				<li><code></code>:</li>
-				<li><code></code>:</li>
-				<li><code>background-color: &lt;color&gt;</code>: can be a hex code, defined using RGB and alpha <code>rgba(255,255,255,0.5)</code> or Hue, Saturation, Lightness and alpha <code>hsla(240, 100%, 50%, 1)</code>, or one of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#System_Colors">a bunch of proprietary extensions</a>.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment"><code>background-attachment</code></a>: If <code>background-image</code> is defined, controls whether the image scrolls with its container or stays fixed with the viewport.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip"><code>background-clip</code></a>: Whether the background stays inside the margin, stays inside the border, or goes under the border to the margin.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"><code>background-color: &lt;color&gt;</code></a>: Can be a hex code, defined using RGB and alpha <code>rgba(255,255,255,0.5)</code> or Hue, Saturation, Lightness and alpha <code>hsla(240, 100%, 50%, 1)</code>, or one of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#System_Colors">a bunch of proprietary extensions</a>.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"><code>background-image</code></a>: Can be used to specify a number of images, stacked with the first image listed closest to the user. MDN is a good explainer on this.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin"><code>background-origin</code></a>: Like <code>background-clip</code>, it defines where the background's reference for the position's 0,0 coordinate is: at the margin, the border, or the padding.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position"><code>background-position</code></a>: Determines the position of the background image relative to the layer defined by <code>background-origin</code>.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat"><code>background-repeat</code></a>: If the <code>background-image</code> is smaller than the viewport, does it repeat? Does it repeat vertically? Horizontally? Both? There are <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat">complex options</a> that determine if and how the images scale to fit available space.</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size"><code>background-size</code></a>: Does the background require a fixed size? Should it distort to fit the aspect ratio of the element, or should it keep its old aspect ratio and have the leftovers clipped? Or should the whole <code>background-image</code> be visible and be letterboxed with <code>background-color</code>?</li>
 			</ul>
+		</section>
+		<section class="auto">
+			<h1>Time for a break.</h1>
+			<p>If it sounds like I'm telling you to read the specifications, I am.</p>
+			<p><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> isn't the official specifications, but it's an excellent reference.</p>
+			<p><strong>Don't use W3Schools.</strong> It's out-of-date, inaccurate, and not worth your time.</p>
 			<p>Watch <a href="https://www.youtube.com/embed/HmStJQzclHc">this 26-minute talk</a>. It explains the origins of color names. It's ... interesting.</p>
 		</section>
 		<section todo>
 			<h1>Images</h1>
+			<p>You have an inkling of what CSS can do with images from the <code>background</code> property.
 		</section>
 		<section todo>
 			<h1>Iframes</h1>

@@ -34,4 +34,6 @@ This talk brought to you by the [Collegiate Web Developers Group](www.cwdg.club)
 
 `Gruntfile.js` and `package.json` are [GPL 2](https://www.gnu.org/licenses/gpl-2.0.html).
 
+`img/whitediamond.png` is [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), [copyright Atle Mo and Subtle Patterns](http://subtlepatterns.com/white-diamond/).
+
 Everything else here is [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
