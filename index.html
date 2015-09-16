@@ -59,6 +59,12 @@
 			<h1> How to follow along</h2>
 			<p class="center hero"><a href="https://benlk.github.io/cwdg-talk">benlk.github.io/cwdg-talk</a></p>
 			<p class="center">Go here in your browser now!</p>
+			<p> Once you have that open in your browser, open your browser's dev tools:</p>
+			<ul>
+				<li><a href="https://developer.apple.com/safari/tools/">Safari</a></li>
+				<li><a href="https://developer.chrome.com/devtools"></a>Chrome/Chromium</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector"></a>Firefox</li>
+			</ul>
 			<p class="credits"><a href="https://github.com/benlk/cwdg-talk">Source code</a></p>
 		</section>
 		<section>
@@ -429,14 +435,61 @@ color: pink;
 
 
 		</section>
-		<section todo>
+		<section >
 			<h1>Lists</h1>
-			<p>// Unordered</p>
-			<p>	// make it inline</p>
-			<p>	// remove dots</p>
-			<p>	// change alignment, etc</p>
-			<p>// Ordered</p>
-			<p>	// Different numbering types</p>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ol>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+			<p>Lists can be marked with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type">many different markers</a>:</p>
+			<ul>
+				<li>
+					Normal discs.
+					<ul>
+						<li>
+							Normal circles.
+							<ul style="list-style-type: cjk-ideographic">
+								<li>Unordered lists can be styled to look like they're ordered.</li>
+								<li>This one used the <code>cjk-ideographic</code> format.</li>
+								<li></li>
+							</ul>
+							<ol style="list-style-type: decimal-leading-zero">
+								<li>Leading zeroes on the decimal counter.</li>
+								<li></li>
+								<li></li>
+							</ol>
+						</li>
+						<li></li>
+						<li></li>
+					</ul>
+					<ol style="list-style-type: lower-greek;">
+						<li>Lowercase Greek letters.</li>
+						<li></li>
+						<li></li>
+					</ol>
+				</li>
+				<li></li>
+				<li></li>
+			</ul>
+			<ol style="list-style-type: lower-roman;">
+				<li>Lowercase Roman numerals!</li>
+				<li></li>
+				<li></li>
+			</ol>
+			<p>You can even create inline lists:</p>
+			<ul class="inline">
+				<li>Beep</li>
+				<li>Beep</li>
+				<li>Beep</li>
+				<li>Beep</li>
+			</ul>
+			<p>(Use your browser's inspector to see how I did that one.)</p>
 		</section>
 		<section todo>
 			<h1>Tables</h1>
