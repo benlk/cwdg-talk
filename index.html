@@ -260,7 +260,15 @@ color: pink;
 		</section>
 		<section>
 			<h1>The box model</h1>
-			<a href="https://css-tricks.com/the-css-box-model/">CSS Tricks explains it better than I can</a>.</p>
+			</p><a href="https://css-tricks.com/the-css-box-model/">CSS Tricks explains it better than I can</a>.</p>
+			<p><a href="http://www.w3.org/TR/CSS2/box.html">Here's what the W3C has to say</a></p>
+			<img src="boxdim.png" />
+			<p>Important things to remember:</p>
+			<ul>
+				<li>Everything is a rectangle.</li>
+				<li>Even circles are rectangles.</li>
+				<li>Rectangles have content, padding, borders, and margins &mdash; even if they're invisible with zero width.</li>
+			</ul>
 		</section>
 		<section class="borders">
 			<h1>Let's talk about borders</h1>
@@ -394,7 +402,7 @@ color: pink;
 			<h1>Time for a break.</h1>
 			<p>If it sounds like I'm telling you to read the specifications, I am.</p>
 			<p><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> isn't the official specifications, but it's an excellent reference.</p>
-			<p><strong>Don't use W3Schools.</strong> It's out-of-date, inaccurate, and not worth your time.</p>
+			<p><strong>Don't use W3Schools.</strong> It's out-of-date, inaccurate, and not worth your time. It is the Yahoo Answers of coding resources.</p>
 			<p>Watch <a href="https://www.youtube.com/embed/HmStJQzclHc">this 26-minute talk</a>. It explains the origins of color names. It's ... interesting.</p>
 			<p class="center hero">What are your questions?</p>
 		</section>
@@ -493,6 +501,56 @@ color: pink;
 		</section>
 		<section todo>
 			<h1>Tables</h1>
+			<p>Sometimes you want to display a table of data, and it comes out looking like this:</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Tweet</th>
+						<th>Type</th>
+						<th>Ratio</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="news">
+					<td>Sep. 11, 2015</td>
+					<td>
+					<a href="https://twitter.com/TheLantern/status/642334607510228992">642334607510228992</a>
+					</td>
+					<td>news</td>
+					<td>0</td>
+					<td id="chart" width="80">
+					</td>
+					</tr>
+					<tr class="news">
+					<td>Sep. 11, 2015</td>
+					<td>
+					<a href="https://twitter.com/TheLantern/status/642344398630559744">642344398630559744</a>
+					</td>
+					<td>news</td>
+					<td>0</td>
+					</tr>
+					<tr class="news">
+					<td>Sep. 11, 2015</td>
+					<td>
+					<a href="https://twitter.com/TheLantern/status/642352012575817729">642352012575817729</a>
+					</td>
+					<td>news</td>
+					<td>0</td>
+					</tr>
+					<tr class="opinion">
+					<td>Sep. 11, 2015</td>
+					<td>
+					<a href="https://twitter.com/TheLantern/status/642367471723409408">642367471723409408</a>
+					</td>
+					<td>opinion</td>
+					<td>0</td>
+					</tr>
+				</tbody>
+				<tfoot>
+				</tfoot>
+			</table>
+			<p>If you don't like how this table looks, check out <a href="http://www.w3.org/wiki/Styling_tables">the W3 wiki's article on styling tables</a> and <a href="http://www.daveliepmann.com/tufte-css/">Edward-Tufte-inspired table designs</a>. Remember that when it comes to styling tables, less is more.</p>
 		</section>
 		<section todo>
 			<h1>border-radiuses</h1>
