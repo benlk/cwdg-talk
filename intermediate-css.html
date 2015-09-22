@@ -2,9 +2,7 @@
 <html>
 	<head>
 		<title>Intermediate CSS</title>
-		<!--
-		<meta http-equiv="refresh" content="10; URL=http://localhost/etc/cwdg-talk/"></meta>
-		-->
+		<meta http-equiv="refresh" content="10; URL=http://localhost/etc/cwdg-talk/intermediate-css.html"></meta>
 		<link rel="stylesheet" href="css/style.css"/>
 		<link rel="stylesheet" href="css/intermediate-css.css"/>
 	</head>
@@ -55,8 +53,8 @@
 			<p>
 				<span class="center">This talk is brought to you in part by:</span>
 				<span class="center hero">
-					<a href="http://mrpg.org.ohio-state.edu/">
-						<img src="img/mrpg_logo.png" alt="The Medieval and Renaissance Performers' Guild" /></a></span></p>
+					<a href="http://guild.org.ohio-state.edu/">
+						<img src="img/guild_logo.png" alt="The Medieval and Renaissance Performers' Guild" /></a></span></p>
 			<p class="center">We want you to dress up in costume and act silly!</p>
 		</section>
 		<section>
@@ -71,7 +69,7 @@
 			</ul>
 			<p class="credits"><a href="https://github.com/benlk/cwdg-talk">Source code</a></p>
 		</section>
-		<section todo>
+		<section >
 			<h2>Units</h2>
 			<p><a href="intro-css.html">Last week</a>, I used a few different types of units in the examples:</p>
 			<ul>
@@ -81,7 +79,7 @@
 			<p>The root CSS unit is the pixel, <code>px</code>. It's equal to one pixel on your device, <em>unless</em> you've got a high-Dots-Per-Inch device like an iPhone or a 4K laptop or a Macbook or really any high-end device made in the last two years.</p>
 			<p>From the CSS pixel are built the units of absolute length, which <sup>usually</sup> don't change while the page is loaded:</p>
 			<ul>
-				<li><code>in<code>: Inches: 96 pixels per inch, usually. Most high-DPI devices shim this to 96 px per device screen inch.</li>
+				<li><code>in</code>: Inches: 96 pixels per inch, usually. Most high-DPI devices shim this to 96 px per device screen inch.</li>
 				<li><code>mm</code>: Millimeters</li>
 				<li><code>cm</code>: Centimeters</li>
 				<li><code>pt</code>: Points, equal to 1/72 of an inch and commonly used in printing</li>
@@ -90,12 +88,26 @@
 			<p>Remember, those aren't physical units. They're based on the ideal of <code>1in = 96px</code>. You're probably not going to use them unless you're doing CSS for print stylesheets.</p>
 			<p>There are units that scale with the font size:</p>
 			<ul>
-				<li><code></code>: </li>
-				<li><code></code>: </li>
-				<li><code></code>: </li>
-				<li><code></code>: </li>
-				<li><code></code>: </li>
+				<li><code>em</code>: The width of an <code>m</code> in the font, typographically speaking, but actually the calculated height of the <code>font-side</code> of this element, or the value inherited from its parent.</li>
+				<li><code>ex</code>: The height of the <code>x</code> character, so the x-height of the language. Usually equal-ish to 0.5 em.</li>
+				<li><code>ch</code>: The width-ish of the character <code>0</code> zero.</li>
+				<li><code>rem</code>: The font-size of the root element of the document, which is usually <code>html</code>.</li>
 			</ul>
+			<p>Then there are the units that scale with the size of the browser's viewport:</p>
+			<ul>
+				<li>vh<code></code>: 1/100 of the height of the viewport</li>
+				<li>vw<code></code>: 1/100 of the width of the viewport</li>
+				<li>vmin<code></code>: 1/100 of whichever is smaller, the width or height of the viewport</li>
+				<li>vmax<code></code>: 1/100 of whichever is larger, the width or height of the viewport</li>
+			</ul>
+			<p>Those <a href="http://caniuse.com/#search=vmax">don't have the best IE support</a></p>
+
+			<p>If you're not sure what to use, it's safe to stick to <code>px</code>.</p>
+			<hr/>
+			<p>And then this funky character: <code>%</code></p>
+		</section>
+		<section todo>
+			<h2><code>%</code></h2>
 		</section>
 		<section todo>
 			<h2>Pseudo-elements</h2>
