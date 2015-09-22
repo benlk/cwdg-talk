@@ -15,10 +15,10 @@
 				<li>Units</li>
 				<li>Pseudo-elements</li>
 				<li>Positioning</li>
+				<li>Z-indexes</li>
 				<li>Grids</li>
 				<li>Responsive web design</li>
 				<li>Media queries</li>
-				<li>Z-indexes</li>
 			</ul>
 			<footer class="credits">
 				<p>2015-09-22</p>
@@ -56,7 +56,11 @@
 				<span class="center">This talk is brought to you in part by:</span>
 				<span class="center hero">
 					<a href="http://guild.org.ohio-state.edu/">
-						<img src="img/guild_logo.png" alt="The Medieval and Renaissance Performers' Guild" /></a></span></p>
+						<img src="img/mrpg.gif" alt="The Medieval and Renaissance Performers' Guild" />
+					</a>
+				</span>
+			</p>
+			<p class="center"><a href="http://guild.org.ohio-state.edu/">The Medieval and Renaissance Performer's Guild</a></p>
 			<p class="center">We want you to dress up in costume and act silly!</p>
 		</section>
 		<section>
@@ -73,7 +77,7 @@
 		</section>
 		<section >
 			<h2>Units</h2>
-			<p><a href="intro-css.html">Last week</a>, I used a few different types of units in the examples:</p>
+			<p><a href="intro-css.html">Last week</a>, I used a few different measures in the examples:</p>
 			<ul>
 				<li><code>px</code></li>
 				<li><code>%</code></li>
@@ -97,43 +101,64 @@
 			</ul>
 			<p>Then there are the units that scale with the size of the browser's viewport:</p>
 			<ul>
-				<li>vh<code></code>: 1/100 of the height of the viewport</li>
-				<li>vw<code></code>: 1/100 of the width of the viewport</li>
-				<li>vmin<code></code>: 1/100 of whichever is smaller, the width or height of the viewport</li>
-				<li>vmax<code></code>: 1/100 of whichever is larger, the width or height of the viewport</li>
+				<li><code>vh</code>: 1/100 of the height of the viewport</li>
+				<li><code>vw</code>: 1/100 of the width of the viewport</li>
+				<li><code>vmin</code>: 1/100 of whichever is smaller, the width or height of the viewport</li>
+				<li><code>vmax</code>: 1/100 of whichever is larger, the width or height of the viewport</li>
 			</ul>
-			<p>Those <a href="http://caniuse.com/#search=vmax">don't have the best IE support</a></p>
+			<p>Those <a href="http://caniuse.com/#search=vmax">don't have the best IE support</a>.</p>
 
 			<p>If you're not sure what to use, it's safe to stick to <code>px</code>.</p>
 			<hr/>
-			<p>And then this funky character: <code>%</code></p>
+			<p class="center">And then there's this funky character: <br/><code>%</code></p>
 		</section>
-		<section todo>
-			<h2><code>%</code></h2>
-		</section>
-		<section todo>
-			<h2>Pseudo-elements</h2>
-		</section>
-		<section todo>
-			<h2>Positioning</h2>
-		</section>
-		<section todo>
-			<h2>Grids</h2>
-		</section>
-		<section todo>
-			<h2></h2>
+		<section>
+			<h2><code>%</code> is not a unit</h2>
+			<pre><code>.narrow { width: 30%; } </code></pre>
+			<p>When you use percent for the value of a property, it references the parent element's property value.</p>
+			<p>If the parent element's property is a percent, then the parent needs to have a width that isn't a percent.</p>
+			<p>If it's percents all the way up to the root element, then you're probably good.</p>
+			<p>If it's percents all the way up to an element with a fixed value, you're good.</p>
+			<p>If it's percents up to an element that doesn't have a fixed value, it's an invalid property and your browser will ignore it.</p>
 		</section>
 		<section >
-			<h2></h2>
+			<h2>Pseudo-elements</h2>
+			<p>Pseudo-elements are not found in your HTML.</p>
+			<p class="has-star">Example text. Loren ipsum dolor sit amet quis adipiscing three point one four one five nine two six.</p>
+			<style contenteditable>p.has-star {
+	color: purple;
+}
+p.has-star::before {
+	display: inline-block;
+	margin-right: 0.5em;
+	content: "\2605";
+	color: #990;
+	font-size: inherit;
+}
+</style>
+			<p>You can use them to add decorative symbols, to add decorative labels or triangles, or really for whatever purpose you need a single element for.</p>
+			<p>This will be covered more in detail next week, in Eli's talk.</p>
+		</section>
+		<section >
+			<h2>Positioning</h2>
+			<p>Most things are <code>position: relative;</code>, but they don't have to be.</p>
+			<p>Let's check out <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">MDN's article</a> and then do some experimentation</p>
+		</section>
+		<section >
+			<h2>Grids</h2>
+			<p>What do you get when you combine margins, padding, widths and floats?<p>
+			<p>Grid systems!</p>
 			<ul>
-				<li>Units</li>
-				<li>Pseudo-elements</li>
-				<li>Positioning</li>
-				<li>Grids</li>
-				<li>Responsive web design</li>
-				<li>Media queries</li>
-				<li>Z-indexes</li>
+				<li><a href="http://getbootstrap.com/css/#grid">Bootstrap</a></li>
+				<li><a href="http://foundation.zurb.com/docs/components/grid.html">Foundation</a></li>
+				<li><a href="http://neat.bourbon.io/">Bourbon Neat</a></li>
 			</ul>
+
+		</section>
+		<section>
+			<h2>Responsive Web Design and Media Queries</h2>
+			<p>The best resources for this are Google and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Mozilla Developer Network</a></p>
+			<p>If you're looking for some philosophy of responsive web development, check out <a href="http://responsivewebdesign.com/">the source of the philosophy</a></p>
 		</section>
 		<section>
 			<h1>Where can you go from here?</h1>
@@ -143,6 +168,7 @@
 				<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started">Mozilla's CSS tutorial</a></li>
 				<li><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a>, a fantastic resource for HTML, CSS, JavaScript, and obscure browser Js APIs</li>
 				<li><a href="https://www.codecademy.com/tracks/web">Codecademy's web track</a>, which will walk you through HTML and CSS to build your own r&eacute;sum&eacute;</li>
+				<li><a href="https://source.opennews.org/en-US/articles/lonely-newsroom-coder/">LONELY CODERS, HERE'S HOW TO GET THINGS DONE</a> from Source</li>
 			</ul>
 		</section>
 		<section>
