@@ -10,6 +10,8 @@ module.exports = function(grunt) {
 
     var CSS_LESS_FILES = {
         'css/style.css': 'less/style.less',
+        'css/intro-css.css': 'less/intro-css.less',
+        'css/intermediate-css.css': 'less/intermediate-css.less',
     };
 
     grunt.initConfig({
@@ -30,7 +32,7 @@ module.exports = function(grunt) {
         watch: {
             less: {
                 files: [
-                    'less/**/*.less',
+                    'less/*.less',
                 ],
                 tasks: [
                     'less:compile',

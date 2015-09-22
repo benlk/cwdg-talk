@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Intermediate CSS</title>
+		<!--
+		<meta http-equiv="refresh" content="10; URL=http://localhost/etc/cwdg-talk/"></meta>
+		-->
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/intermediate-css.css"/>
+	</head>
+	<body>
+		<section class="title intro">
+			<h1>Intermediate CSS</h1>
+			<ul>
+				<li>Units</li>
+				<li>Pseudo-elements</li>
+				<li>Positioning</li>
+				<li>Grids</li>
+				<li>Responsive web design</li>
+				<li>Media queries</li>
+				<li>Z-indexes</li>
+			</ul>
+			<footer class="credits">
+				<p>2015-09-22</p>
+				<p>Ben Keith <a href="https://twitter.com/benlkeith">@benlkeith</a></p>
+				<p><small><a href="https://github.com/benlk/cwdg-talk/blob/gh-pages/README.md">Credits and license</a></small></p>
+			</footer>
+		</section>
+		<section class="intro">
+			<h2>This deck does not cover:</h2>
+			<ul>
+				<li>What is CSS?</li>
+				<li>How is it loaded?</li>
+				<li>What can you do with it?</li>
+				<li>Where can you learn more?</li>
+				<li>Basic styling</li>
+			</ul>
+			<p>That's <a href="intro-css.html">last week</a>.</p>
+		</section>
+		<section class="intro">
+			<h2>This deck also does not cover</h2>
+			<ul>
+				<li>Stealing other people's CSS</li>
+				<li>Animations</li>
+				<li>Advanced pseudo-elements and pseudo-classes</li>
+				<li>Filters</li>
+				<li>Transformatinos</li>
+				<li>Browser prefixes</li>
+				<li>Preprocessors</li>
+				<li>Mixins</li>
+			</ul>
+			<p>That's next week, and it will be covered by Open Source Club president Eli Gladman.</p>
+		</section>
+		<section class="sponsored">
+			<p>
+				<span class="center">This talk is brought to you in part by:</span>
+				<span class="center hero">
+					<a href="http://mrpg.org.ohio-state.edu/">
+						<img src="img/mrpg_logo.png" alt="The Medieval and Renaissance Performers' Guild" /></a></span></p>
+			<p class="center">We want you to dress up in costume and act silly!</p>
+		</section>
+		<section>
+			<h1> How to follow along</h2>
+			<p class="center hero"><a href="https://benlk.github.io/cwdg-talk">benlk.github.io/cwdg-talk</a></p>
+			<p class="center">Go here in your browser now!</p>
+			<p> Once you have that open in your browser, open your browser's dev tools:</p>
+			<ul>
+				<li><a href="https://developer.apple.com/safari/tools/">Safari</a></li>
+				<li><a href="https://developer.chrome.com/devtools">Chrome/Chromium</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector">Firefox</a></li>
+			</ul>
+			<p class="credits"><a href="https://github.com/benlk/cwdg-talk">Source code</a></p>
+		</section>
+		<section todo>
+			<h2>Units</h2>
+			<p><a href="intro-css.html">Last week</a>, I used a few different types of units in the examples:</p>
+			<ul>
+				<li><code>px</code>:</li>
+				<li><code>%</code>:</li>
+			</ul>
+			<p>The root CSS unit is the pixel, <code>px</code>. It's equal to one pixel on your device, <em>unless</em> you've got a high-Dots-Per-Inch device like an iPhone or a 4K laptop or a Macbook or really any high-end device made in the last two years.</p>
+			<p>From the CSS pixel are built the units of absolute length, which <sup>usually</sup> don't change while the page is loaded:</p>
+			<ul>
+				<li><code>in<code>: Inches: 96 pixels per inch, usually. Most high-DPI devices shim this to 96 px per device screen inch.</li>
+				<li><code>mm</code>: Millimeters</li>
+				<li><code>cm</code>: Centimeters</li>
+				<li><code>pt</code>: Points, equal to 1/72 of an inch and commonly used in printing</li>
+				<li><code>pc</code>: Pica, also used in printing</li>
+			</ul>
+			<p>Remember, those aren't physical units. They're based on the ideal of <code>1in = 96px</code>. You're probably not going to use them unless you're doing CSS for print stylesheets.</p>
+			<p>There are units that scale with the font size:</p>
+			<ul>
+				<li><code></code>: </li>
+				<li><code></code>: </li>
+				<li><code></code>: </li>
+				<li><code></code>: </li>
+				<li><code></code>: </li>
+			</ul>
+		</section>
+		<section todo>
+			<h2>Pseudo-elements</h2>
+		</section>
+		<section todo>
+			<h2>Positioning</h2>
+		</section>
+		<section todo>
+			<h2>Grids</h2>
+		</section>
+		<section todo>
+			<h2></h2>
+		</section>
+		<section >
+			<h2></h2>
+			<ul>
+				<li>Units</li>
+				<li>Pseudo-elements</li>
+				<li>Positioning</li>
+				<li>Grids</li>
+				<li>Responsive web design</li>
+				<li>Media queries</li>
+				<li>Z-indexes</li>
+			</ul>
+		</section>
+		<section>
+			<h1>Where can you go from here?</h1>
+			<p>Learning resources:</p>
+			<ul>
+				<li><a href="http://www.w3.org/Style/CSS/">The W3C CSS page</a>, the <em>definitive</em> resource for CSS</li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started">Mozilla's CSS tutorial</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a>, a fantastic resource for HTML, CSS, JavaScript, and obscure browser Js APIs</li>
+				<li><a href="https://www.codecademy.com/tracks/web">Codecademy's web track</a>, which will walk you through HTML and CSS to build your own r&eacute;sum&eacute;</li>
+			</ul>
+		</section>
+		<section>
+			<h1>What's the best way to learn?</h1>
+			<p>Play around with things on your own. Build a portfolio site. Use your browser's inspector tools to see how other people build their sites. See if you can reproduce that style.</p>
+		</section>
+	</body>
+</html>
